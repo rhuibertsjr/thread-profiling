@@ -7,6 +7,7 @@
 #include <string.h>
 
 #define internal static
+#define global static
 
 typedef uint8_t  u8;
 typedef uint16_t u16;

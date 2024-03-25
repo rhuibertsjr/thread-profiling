@@ -8,6 +8,21 @@
 
 #include <stdio.h>
 
+void
+func(void *ptr)
+{
+  printf("Hello world\n");
+  fflush(stdout);
+  return NULL;
+}
+
 int main(void) {
+
+  platform_initialize();
+
+  platform_thread_open(func, 0);
+
+  while(1);
+
   return 0;
 }
