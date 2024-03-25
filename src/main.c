@@ -11,8 +11,11 @@
 void
 func(void *ptr)
 {
-  printf("Hello world\n");
+  uint64_t *n = ptr;
+
+  printf("Number: %u\n", *n);
   fflush(stdout);
+
   return NULL;
 }
 
@@ -20,10 +23,10 @@ int main(void) {
 
   platform_initialize();
 
-  platform_thread_open(func, 0);
-  platform_thread_open(func, 0);
-  platform_thread_open(func, 0);
-  platform_thread_open(func, 0);
+  platform_thread_open(func, 1);
+  platform_thread_open(func, 2);
+  platform_thread_open(func, 3);
+  platform_thread_open(func, 4);
 
   while(1);
 

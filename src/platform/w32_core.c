@@ -54,9 +54,9 @@ platform_thread__base (void *thread_entity)
 {
   W32Entity *entity = (W32Entity*) thread_entity;
   thread_function_t *thread_function = entity->thread.function;
-  void *thread_parameters = entity->thread.function;
+  void *thread_parameters = entity->thread.parameters;
 
-  thread_function(thread_parameters);
+  thread_function(&thread_parameters);
 
   return 0;
 }
