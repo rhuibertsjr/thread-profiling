@@ -21,6 +21,9 @@ int main(void) {
   platform_initialize();
 
   platform_thread_open(func, 0);
+  platform_thread_open(func, 0);
+  platform_thread_open(func, 0);
+  platform_thread_open(func, 0);
 
   while(1);
 

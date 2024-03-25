@@ -9,7 +9,7 @@ arena_initialize(u64 size)
   {
     result = (Arena*) backing_buffer;
 
-    result->buffer = backing_buffer;
+    result->buffer = (u64*) backing_buffer;
     result->offset = sizeof(Arena); 
     result->size   = sizeof(Arena) + size;
   }

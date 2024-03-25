@@ -1,7 +1,5 @@
-#pragma comment(lib, "user32")
-
 global Arena *w32_permanent_storage = 0;
-global Arena *w32_entity_free = 0;
+global W32Entity *w32_entity_free = 0;
 
 //= rhjr: windows-specific
 
@@ -37,6 +35,7 @@ w32_entity_release(W32Entity *entity)
 internal void
 platform_initialize()
 {
+  w32_permanent_storage = arena_initialize(255);
 }
 
 internal void
