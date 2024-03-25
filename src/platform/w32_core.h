@@ -1,0 +1,4 @@
+#ifndef PLATFORM_CORE_H
+#define PLATFORM_CORE_H
+
+#endif //PLATFORM_CORE_H
